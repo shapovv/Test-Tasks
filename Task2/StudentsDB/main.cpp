@@ -133,6 +133,30 @@ void handle_delete(http_request request) {
             return;
         }
 
+        // Проверка, существует ли студент с таким ID
+        std::string checkSql = "SELECT COUNT(*) FROM students WHERE id = ?";
+        sqlite3_stmt *stmt;
+        if (sqlite3_prepare_v2(db, checkSql.c_str(), -1, &stmt, NULL) != SQLITE_OK) {
+            http_response response(status_codes::InternalError);
+            response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
+            response.set_body(U("Error in database operation"));
+            request.reply(response);
+            return;
+        }
+        sqlite3_bind_text(stmt, 1, studentId.c_str(), -1, SQLITE_TRANSIENT);
+
+        if (sqlite3_step(stmt) != SQLITE_ROW || sqlite3_column_int(stmt, 0) == 0) {
+            // Студент с таким ID не найден
+            http_response response(status_codes::NotFound);
+            response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
+            response.set_body(U("Student not found"));
+            request.reply(response);
+            sqlite3_finalize(stmt);
+            return;
+        }
+        sqlite3_finalize(stmt);
+
+        // Продолжение удаления студента, если он существует
         std::string sql = "DELETE FROM students WHERE id = ?";
         if (!executeSQL(sql, {studentId})) {
             http_response response(status_codes::InternalError);
@@ -153,6 +177,7 @@ void handle_delete(http_request request) {
         request.reply(response);
     }
 }
+
 
 
 void closeDB() {

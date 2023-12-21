@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB
+# Install script for directory: /Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

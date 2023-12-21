@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja /Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja /Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB
 -- The C compiler identification is AppleClang 14.0.0.14000029
 -- The CXX compiler identification is AppleClang 14.0.0.14000029
 -- Detecting C compiler ABI info
@@ -17,4 +17,4 @@
 -- Found SQLite3: /Library/Frameworks/Mono.framework/Headers (found version "3.26.0") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB/cmake-build-debug
+-- Build files have been written to: /Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB/cmake-build-debug

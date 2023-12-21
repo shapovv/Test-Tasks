@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB/cmake-build-debug"
+			"value" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -663,7 +663,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB"
+			"value" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1379,7 +1379,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB/cmake-build-debug"
+			"value" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB/cmake-build-debug"
 		},
 		{
 			"name" : "StudentsDB_IS_TOP_LEVEL",
@@ -1403,7 +1403,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB"
+			"value" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB"
 		},
 		{
 			"name" : "ZLIB_INCLUDE_DIR",

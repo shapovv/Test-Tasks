@@ -1595,8 +1595,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB/cmake-build-debug",
-		"source" : "/Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB"
+		"build" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB/cmake-build-debug",
+		"source" : "/Users/shapovv/Desktop/Test-Tasks/Task2/StudentsDB"
 	},
 	"version" : 
 	{
