@@ -1,0 +1,2 @@
+This is Sub2 File 1.
+require 'SubFolder1/Sub1File2.txt'

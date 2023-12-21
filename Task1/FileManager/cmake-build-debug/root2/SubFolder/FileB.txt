@@ -1,0 +1,2 @@
+Content of File B.
+require 'SubFolder/FileC.txt'
