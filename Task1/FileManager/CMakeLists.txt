@@ -3,4 +3,4 @@ project(FileManager)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(FileManager main.cpp)
+add_executable(FileManager main.cpp FileContent.cpp DependencyGraph.cpp FileUtils.cpp)
