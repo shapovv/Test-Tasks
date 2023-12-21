@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/shapovv/IdeaProjects/TodoList/my-proxy-server/Test-Tasks/Task2/StudentsDB Select CMakeLists.txt

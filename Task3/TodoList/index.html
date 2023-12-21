@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список задач</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div id="todo-app">
+  <!-- Поисковая строка -->
+  <div id="search-container">
+    <input type="text" id="search-box" placeholder="Поиск">
+  </div>
+
+  <!-- Кнопки действий -->
+  <div id="actions-container">
+    <button id="today-button">Сегодня</button>
+    <button id="week-button">На неделю</button>
+    <div id="sort-container">
+      <button id="sort-button">Сортировать по дате</button>
+    </div>
+    <label for="uncompleted-checkbox">
+      <input type="checkbox" id="uncompleted-checkbox">
+      Только невыполненные
+    </label>
+  </div>
+
+  <!-- Календарь -->
+  <div id="calendar-container">
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Список задач -->
+  <div id="tasks-container">
+    <div class="task">
+      <div class="task-title">Название</div>
+      <div class="task-description">Описание</div>
+      <div class="task-date">08.05.2022 00:10</div>
+      <div class="task-actions">
+        <input type="checkbox" class="task-completed-checkbox">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
