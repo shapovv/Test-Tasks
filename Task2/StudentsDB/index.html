@@ -6,6 +6,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<!-- Форма для добавления нового студента -->
 <h2>Добавить студента</h2>
 <form id="addStudentForm">
   <input type="text" id="firstName" placeholder="Имя" required>
@@ -16,10 +17,12 @@
   <button type="submit">Добавить</button>
 </form>
 
+<!-- Интерфейс для удаления студента по ID -->
 <h2>Удалить студента</h2>
 <input type="number" id="deleteStudentId" placeholder="ID студента" required>
 <button onclick="deleteStudent()">Удалить</button>
 
+<!-- Таблица для отображения списка студентов -->
 <h2>Список студентов</h2>
 <table id="studentsTable">
   <tr>
@@ -30,9 +33,11 @@
     <th>Дата рождения</th>
     <th>Группа</th>
   </tr>
+  <!-- Строки таблицы будут добавлены здесь динамически -->
 </table>
 <script>
   $(document).ready(function() {
+    // Обработка отправки формы добавления студента
     $('#addStudentForm').on('submit', function(e) {
       e.preventDefault();
       var studentData = {
@@ -43,6 +48,7 @@
         group_name: $('#groupName').val()
       };
 
+      // Отправка данных нового студента на сервер методом POST
       $.ajax({
         url: 'http://localhost:6502',
         type: 'POST',
@@ -50,25 +56,26 @@
         data: JSON.stringify(studentData),
         success: function(response) {
           alert('Студент добавлен');
-          loadStudents();
+          loadStudents(); // Перезагрузка списка студентов
         },
         error: function(xhr, status, error) {
           console.log('Ошибка: ', xhr.responseText);
           alert('Ошибка при добавлении студента');
         }
       });
-
     });
 
+    // Функция для удаления студента
     function deleteStudent() {
       var studentId = $('#deleteStudentId').val();
 
+      // Отправка запроса на удаление студента по ID
       $.ajax({
         url: 'http://localhost:6502/students/' + studentId,
         type: 'DELETE',
         success: function(response) {
           alert('Студент удален');
-          loadStudents();
+          loadStudents(); // Перезагрузка списка студентов
         },
         error: function(response) {
           alert('Ошибка при удалении студента');
@@ -76,6 +83,7 @@
       });
     }
 
+    // Функция для загрузки и отображения списка студентов
     function loadStudents() {
       $.ajax({
         url: 'http://localhost:6502',
@@ -85,13 +93,13 @@
           $.each(students, function(index, student) {
             tableContent += '<tr><td>' + student.id + '</td><td>' + student.first_name + '</td><td>' + student.last_name + '</td><td>' + student.middle_name + '</td><td>' + student.birth_date + '</td><td>' + student.group_name + '</td></tr>';
           });
-          $('#studentsTable').html(tableContent);
+          $('#studentsTable').html(tableContent); // Обновление HTML таблицы
         }
       });
     }
 
-    window.deleteStudent = deleteStudent; // Экспорт функции deleteStudent
-    loadStudents(); // Загрузка списка студентов при загрузке страницы
+    window.deleteStudent = deleteStudent; // Экспорт функции deleteStudent для доступа из HTML
+    loadStudents(); // Загрузка списка студентов при инициализации страницы
   });
 </script>
 
